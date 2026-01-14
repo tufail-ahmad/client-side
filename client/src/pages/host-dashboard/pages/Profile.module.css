@@ -1,0 +1,119 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* HEADER */
+.header h1 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.header p {
+  color: #b5b5be;
+  font-size: 14px;
+}
+
+/* FORM WRAPPER */
+.formWrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* PROFILE AVATAR */
+.avatarSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatarSection img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #c89b3c;
+}
+
+.avatarSection button {
+  background: #c89b3c;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.25s ease;
+}
+
+.avatarSection button:hover {
+  background: #ddb35a;
+}
+
+/* FORM */
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  color: #cfcfd6;
+  font-size: 13px;
+}
+
+.field input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #24242a;
+  background: #1c1c23;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.25s ease;
+}
+
+.field input:focus {
+  border-color: #c89b3c;
+}
+
+/* SAVE BUTTON */
+.saveBtn {
+  align-self: flex-start;
+  background: #c89b3c;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.saveBtn:hover {
+  background: #ddb35a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .formWrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .avatarSection img {
+    width: 120px;
+    height: 120px;
+  }
+}

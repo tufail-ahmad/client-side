@@ -1,0 +1,248 @@
+/* =======================
+   BASE HEADER
+======================= */
+.header {
+  position: sticky;
+  margin-bottom: 8px;
+  top: 0;
+  z-index: 1000;
+  background: #0b0b0f;
+  border-bottom: 1px solid rgb(87, 86, 86);
+  box-shadow: 0 3px 10px rgb(70, 70, 70);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =======================
+   LOGO
+======================= */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #c9a24d;
+  text-decoration: none;
+}
+
+/* =======================
+   DESKTOP NAV
+======================= */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.link,
+.nav span {
+  color: #cfcfd6;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+/* hover underline effect (desktop only) */
+.link::after,
+.nav span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #c89b3c;
+  transition: width 0.25s ease;
+}
+
+.link:hover::after,
+.nav span:hover::after {
+  width: 100%;
+}
+
+.link:hover,
+.nav span:hover {
+  color: #ffffff;
+}
+
+/* =======================
+   DROPDOWN
+======================= */
+.dropdown {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  min-width: 180px;
+  background: #14141a;
+  border: 1px solid #24242a;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu a {
+  padding: 10px 14px;
+  color: #d8d8df;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu a:hover {
+  background: #1f1f2a;
+  color: #ffffff;
+}
+
+/* =======================
+   DESKTOP ACTIONS
+======================= */
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.login,
+.signup,
+.dashboard {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.login {
+  color: #ffffff;
+}
+
+.login:hover {
+  color: #c89b3c;
+}
+
+.signup {
+  background: #c89b3c;
+  color: #0b0b0f;
+}
+
+.signup:hover {
+  background: #ddb45a;
+}
+
+.dashboard {
+  border: 1px solid #3a3a44;
+  color: #ffffff;
+}
+
+.dashboard:hover {
+  border-color: #c89b3c;
+  color: #c89b3c;
+}
+
+/* =======================
+   HAMBURGER
+======================= */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* =======================
+   MOBILE MENU
+======================= */
+.mobileMenu {
+  background: #0f0f15;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* remove underline + color mismatch in mobile */
+.mobileMenu a {
+  text-decoration: none;
+  color: #cfcfd6;
+  font-size: 15px;
+}
+
+/* mobile hover (simple, no underline) */
+.mobileMenu a:hover {
+  color: #ffffff;
+}
+
+/* mobile dropdown trigger */
+.mobileDropdown {
+  font-weight: 600;
+  cursor: pointer;
+  color: #cfcfd6;
+}
+
+.mobileDropdown:hover {
+  color: #ffffff;
+}
+
+.mobileSubmenu {
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobileSubmenu a {
+  font-size: 14px;
+  color: #bdbdc6;
+}
+
+.mobileSubmenu a:hover {
+  color: #ffffff;
+}
+
+/* =======================
+   MOBILE AUTH SECTION
+======================= */
+.mobileAuth {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* reuse desktop button styles */
+.mobileAuth .login,
+.mobileAuth .signup,
+.mobileAuth .dashboard {
+  text-align: center;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    padding: 10px 16px;
+  }
+}

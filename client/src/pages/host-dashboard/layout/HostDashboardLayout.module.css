@@ -1,0 +1,130 @@
+/* ===== ROOT ===== */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #0b0b0f;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ===== DESKTOP SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  height: 100;
+  background: #121217;
+  border-right: 1px solid #24242a;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 72px; /* header height */
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #c89b3c;
+  margin-bottom: 32px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tab {
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #cfcfd6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.tab:hover {
+  background: #1c1c23;
+  color: #c89b3c;
+}
+
+.active {
+  background: #c89b3c;
+  color: #0b0b0f;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+  flex: 1;
+  padding: 28px;
+}
+
+/* ===== MOBILE HOST PANEL ===== */
+.mobilePanel {
+  display: none;
+  max-width: 830px;
+  background: #121217;
+  border-bottom: 1px solid #24242a;
+  padding: 10px 16px;
+  margin-left: 11px;
+  margin-right: 10px;
+  position: sticky;
+  top: 20px; /* header height */
+  z-index: 20;
+}
+
+.dropdownToggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #121217;
+  color: #cfcfd6;
+  padding: 12px 16px;
+  border: 1px solid #24242a;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.arrow {
+  transition: transform 0.25s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.mobileNav {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  background: #121217;
+  border: 1px solid #24242a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mobileNav .tab {
+  padding: 14px 16px;
+  border-radius: 0;
+}
+
+/* ===== RESPONSIVE FIX (MOST IMPORTANT) ===== */
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column; /* 🔥 FIX */
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .mobilePanel {
+    display: block;
+  }
+
+  .main {
+    max-width: 850px;
+    padding: 20px 16px;
+  }
+}

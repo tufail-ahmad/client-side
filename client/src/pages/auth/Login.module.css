@@ -1,0 +1,156 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b0b0e;
+  padding: 40px 20px;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 980px;
+  background: #15151a;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  border: 1px solid #24242a;
+}
+
+/* Left Side */
+.left {
+  padding: 60px 50px;
+  background: linear-gradient(
+    180deg,
+    rgba(201, 162, 77, 0.12),
+    rgba(11, 11, 14, 0.9)
+  );
+}
+
+.left h2 {
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.left p {
+  font-size: 15px;
+  color: #b5b5b5;
+  line-height: 1.7;
+  max-width: 360px;
+}
+
+/* Right Side */
+.right {
+  padding: 60px 50px;
+}
+
+.right h3 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.form {
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.field label {
+  font-size: 13px;
+  color: #b5b5b5;
+  margin-bottom: 8px;
+}
+
+.field input {
+  background: #0b0b0e;
+  border: 1px solid #24242a;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #ffffff;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: #c9a24d;
+}
+
+/* Button */
+.loginBtn {
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  background: #c9a24d;
+  border: 1px solid #c9a24d;
+  color: #0b0b0e;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.loginBtn:hover {
+  background: transparent;
+  color: #c9a24d;
+}
+
+/* Meta Links */
+.meta {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.meta a {
+  font-size: 13px;
+  color: #c9a24d;
+  text-decoration: none;
+}
+
+.meta span {
+  font-size: 13px;
+  color: #b5b5b5;
+}
+
+.meta span a {
+  color: #c9a24d;
+}
+
+/* 🔹 Small Desktop */
+@media (max-width: 1024px) {
+  .card {
+    max-width: 880px;
+  }
+}
+
+/* 🔹 Tablet */
+@media (max-width: 900px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    padding: 50px 40px;
+  }
+}
+
+/* 🔹 Mobile */
+@media (max-width: 480px) {
+  .right {
+    padding: 40px 24px;
+  }
+
+  .right h3 {
+    font-size: 20px;
+  }
+}

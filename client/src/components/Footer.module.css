@@ -1,0 +1,112 @@
+.footer {
+  background: #0b0b0f;
+  color: #cfcfd6;
+  margin-top: 60px;
+}
+
+/* =======================
+   MAIN CONTAINER
+======================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 48px 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* =======================
+   BRAND
+======================= */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 700;
+  color: #c9942d;
+}
+
+.tagline {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #a9a9b2;
+}
+
+/* =======================
+   SECTIONS
+======================= */
+.section h4 {
+  color: #ffffff;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.section a {
+  display: block;
+  text-decoration: none;
+  color: #cfcfd6;
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: color 0.25s ease;
+}
+
+.section a:hover {
+  color: #c89b3c;
+}
+
+/* =======================
+   BOTTOM BAR
+======================= */
+.bottom {
+  border-top: 1px solid #1f1f2a;
+  padding: 16px 20px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+}
+
+.socials a {
+  color: #cfcfd6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.socials a:hover {
+  color: #c89b3c;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 36px 16px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

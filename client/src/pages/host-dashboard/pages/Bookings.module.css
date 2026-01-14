@@ -1,0 +1,94 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* HEADER */
+.header h1 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.header p {
+  color: #b5b5be;
+  font-size: 14px;
+}
+
+/* TABLE WRAPPER */
+.tableWrapper {
+  background: #14141a;
+  border: 1px solid #24242a;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.table thead {
+  background: #1c1c23;
+}
+
+.table th {
+  text-align: left;
+  padding: 14px;
+  color: #cfcfd6;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 1px solid #24242a;
+}
+
+.table td {
+  padding: 14px;
+  color: #ffffff;
+  font-size: 14px;
+  border-bottom: 1px solid #24242a;
+  vertical-align: top;
+}
+
+/* CELL DETAILS */
+.table td span {
+  display: block;
+  font-size: 12px;
+  color: #8f8f98;
+  margin-top: 4px;
+}
+
+.table td strong {
+  font-weight: 600;
+}
+
+/* STATUS */
+.confirmed {
+  color: #3ccf91;
+  font-weight: 600;
+}
+
+.pending {
+  color: #f5c26b;
+  font-weight: 600;
+}
+
+.completed {
+  color: #5fa8ff;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .table {
+    min-width: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+  .table {
+    min-width: 600px;
+  }
+}
